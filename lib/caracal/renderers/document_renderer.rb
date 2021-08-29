@@ -410,7 +410,9 @@ module Caracal
           'w:top'    => document.page_margin_top,
           'w:bottom' => document.page_margin_bottom,
           'w:left'   => document.page_margin_left,
-          'w:right'  => document.page_margin_right
+          'w:right'  => document.page_margin_right,
+          'w:header'  => document.page_margin_header,
+          'w:footer'  => document.page_margin_footer
         }
       end
 

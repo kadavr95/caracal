@@ -25,6 +25,8 @@ module Caracal
           attr_reader :page_margin_bottom
           attr_reader :page_margin_left
           attr_reader :page_margin_right
+          attr_reader :page_margin_header
+          attr_reader :page_margin_footer
 
 
           #-------------------------------------------------------------
@@ -43,6 +45,8 @@ module Caracal
                 @page_margin_bottom = model.margin_bottom
                 @page_margin_left   = model.margin_left
                 @page_margin_right  = model.margin_right
+                @page_margin_header  = model.margin_header
+                @page_margin_header  = model.margin_footer
               else
                 raise Caracal::Errors::InvalidModelError, 'page_margins method requires margins to be smaller than the page size.'
               end
