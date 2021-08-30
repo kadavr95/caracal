@@ -273,9 +273,9 @@ Both the `width` and `height` attributes require positive integer values.
 
 ### Page Margins
 
-Page margins can be set using the `page_margins` method.  The method accepts four parameters for controlling the margins of the document.
+Page margins can be set using the `page_margins` method.  The method accepts six parameters for controlling the margins of the document.
 
-*Margins default to 1.0in for all sides.*
+*Margins default to 1.0in for all sides. Header and footer default to 709 twips*
 
 ```ruby
 docx.page_margins do
@@ -283,10 +283,12 @@ docx.page_margins do
   right   720     # sets the right margin. units in twips.
   top     1440    # sets the top margin. units in twips.
   bottom  1440    # sets the bottom margin. units in twips.
+  header  1440    # sets the header size. units in twips.
+  footer  1440    # sets the footer size. units in twips.
 end
 ```
 
-All attributes require positive integer values. Additionally, the combined size of the margins on either axis cannot exceed the page size on that axis (e.g., the sum of the `left` and `right` values must be less than the `page_width`).
+Margins require positive integer values, footer and header may be equal to zero. Additionally, the combined size of the margins/headers on either axis cannot exceed the page size on that axis (e.g., the sum of the `left` and `right` values must be less than the `page_width`). Header and footer sizes don't add to the top and bottom margins sizes, the biggest value from the corresponding pair determines final size.
 
 
 ### Page Breaks
