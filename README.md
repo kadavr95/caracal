@@ -288,7 +288,7 @@ docx.page_margins do
 end
 ```
 
-Margins require positive integer values, footer and header may be equal to zero. Additionally, the combined size of the margins/headers on either axis cannot exceed the page size on that axis (e.g., the sum of the `left` and `right` values must be less than the `page_width`). Header and footer sizes don't add to the top and bottom margins sizes, the biggest value from the corresponding pair determines final size.
+Margins require positive integer values, `footer` and `header` may be equal to zero. Additionally, the combined size of the margins on either axis cannot exceed the page size on that axis (e.g., the sum of the `left` and `right` values must be less than the `page_width`). `Header` and `footer` sizes don't add to the `top` and `bottom` margins sizes, only the biggest value from the corresponding pair determines final size.
 
 
 ### Page Breaks
