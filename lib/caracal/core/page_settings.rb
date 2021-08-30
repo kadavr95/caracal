@@ -40,13 +40,14 @@ module Caracal
             model = Caracal::Core::Models::MarginModel.new(options, &block)
 
             if model.valid?
-              if (model.margin_top + model.margin_bottom < page_height) && (model.margin_left + model.margin_right < page_width)
-                @page_margin_top    = model.margin_top
-                @page_margin_bottom = model.margin_bottom
-                @page_margin_left   = model.margin_left
-                @page_margin_right  = model.margin_right
+              if ([model.margin_top, model.margin_header].max + [model.margin_bottom, model.margin_footer].max < page_height) &&
+                  (model.margin_left + model.margin_right < page_width)
+                @page_margin_top     = model.margin_top
+                @page_margin_bottom  = model.margin_bottom
+                @page_margin_left    = model.margin_left
+                @page_margin_right   = model.margin_right
                 @page_margin_header  = model.margin_header
-                @page_margin_header  = model.margin_footer
+                @page_margin_footer  = model.margin_footer
               else
                 raise Caracal::Errors::InvalidModelError, 'page_margins method requires margins to be smaller than the page size.'
               end

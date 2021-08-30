@@ -15,12 +15,12 @@ module Caracal
         #-------------------------------------------------------------
         
         # constants
-        const_set(:DEFAULT_MARGIN_TOP,    0)  # units in twips
-        const_set(:DEFAULT_MARGIN_BOTTOM, 0)  # units in twips
-        const_set(:DEFAULT_MARGIN_LEFT,   0)  # units in twips
-        const_set(:DEFAULT_MARGIN_RIGHT,  0)  # units in twips
-        const_set(:DEFAULT_MARGIN_HEADER,  709)  # units in twips
-        const_set(:DEFAULT_MARGIN_FOOTER,  709)  # units in twips
+        const_set(:DEFAULT_MARGIN_TOP,    0)     # units in twips
+        const_set(:DEFAULT_MARGIN_BOTTOM, 0)     # units in twips
+        const_set(:DEFAULT_MARGIN_LEFT,   0)     # units in twips
+        const_set(:DEFAULT_MARGIN_RIGHT,  0)     # units in twips
+        const_set(:DEFAULT_MARGIN_HEADER, 709)  # units in twips
+        const_set(:DEFAULT_MARGIN_FOOTER, 709)  # units in twips
 
         # accessors
         attr_reader :margin_top
@@ -33,10 +33,10 @@ module Caracal
         
         # initialization
         def initialize(options={}, &block)
-          @margin_top    = DEFAULT_MARGIN_TOP
-          @margin_bottom = DEFAULT_MARGIN_BOTTOM
-          @margin_left   = DEFAULT_MARGIN_LEFT
-          @margin_right  = DEFAULT_MARGIN_RIGHT
+          @margin_top     = DEFAULT_MARGIN_TOP
+          @margin_bottom  = DEFAULT_MARGIN_BOTTOM
+          @margin_left    = DEFAULT_MARGIN_LEFT
+          @margin_right   = DEFAULT_MARGIN_RIGHT
           @margin_header  = DEFAULT_MARGIN_HEADER
           @margin_footer  = DEFAULT_MARGIN_FOOTER
 
